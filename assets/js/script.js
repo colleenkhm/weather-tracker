@@ -1,7 +1,7 @@
-var apiKey = '920955b96df093ea34bbb2cb68023416';
+const apiKey = '920955b96df093ea34bbb2cb68023416';
 // var currentWeather = 
 $(document).ready(function(){
- var city = "springfield"
+ var city = ""
     var queryURL = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
 
 // function to fetch weather API

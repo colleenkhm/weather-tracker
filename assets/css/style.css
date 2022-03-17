@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+}
+header {
+    text-align: center;
+    background-color: blue;
+    margin: 5px;
+}
+
+header h1 {
+    font-size: 20px;
+    color: white;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.row {
+    white-space: pre-wrap;
+}
+
+.aside {
+    padding: 15px;
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    height: 100%
+}
+
+.forecastDisplay {
+    margin: 0 auto;
+    text-align: left;
+    padding: 5px;
+}
+
+.currentWeather {
+    border: 2px solid black;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-around;
+}
+
+.futureDay {
+    padding: 10px;
+    margin: 5px;
+    background-color: slategray;
+}
