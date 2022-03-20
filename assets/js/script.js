@@ -1,7 +1,7 @@
 const apiKey = '920955b96df093ea34bbb2cb68023416';
 // var currentWeather = 
 $(document).ready(function(){
- var city = ""
+ var city = "portland"
     var queryURL = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
 
 // function to fetch weather API
@@ -14,7 +14,7 @@ fetch(queryURL)
     return data.coord;
 })
 .then(function(coord){
-    return fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${coord.lat}&lon=${coord.lon}&units=imperial&appid=${apiKey}`)
+    return fetch(`http://api.openweathermap.org/data/2.5/onecall?lat=${coord.lat}&lon=${coord.lon}&units=imperial&appid=${apiKey}`)
 })
 .then(function(response) {
     return response.json();
