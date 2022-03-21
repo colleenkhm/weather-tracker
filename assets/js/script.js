@@ -23,7 +23,30 @@ fetch(queryURL)
     console.log(data)
 })
 })
+// icon variable should use if else/ifs
+// rest should be json data
+// creating objects for each future forcast
+var forecastFiveDayArr = [
+{
+//var date = fetch
+}
+];
+// populating weather cards to display 5-day forecast
+// might need to do multiple but there could be a way to use this format only once depending on how I populate the variables
 
+// returning data to cycle through for loop
+${forecastFiveDayArr.map(function(weather) {
+    return weather;
+}).join('')}
+var populateWeatherCard = function() {
+    for (var i=0; i < forecastFiveDayArr.length; i++) {
+document.getElementById(i).innerHTML = `<h2>${date}</h2> 
+<p>${icon}</p>
+<p>${temp}</p>
+<p>${wind}</p>
+<p>${humidity}</p>`
+}
+}
 // function to search for a city
 
 // function to add city to search history
