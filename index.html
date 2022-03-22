@@ -18,70 +18,85 @@
     </header>
     <div class="container-fluid">
         <div class="row">
-            <aside class="col-md-4" id="asideSearch">
-                <section class="row">
-                    <h2>Search for a city:</h2>
-                    <form id="citySearch">
-                        <div class="formEntry">
-                            <input type="text" id="searchInput" placeholder="Find a city...">
-                            <button type="submit">Search</button>
+            <aside class="col-md-4" id="aside">
+                <div class="row flex-container">
+                    <div class="col-md-4 citySearch">
+                        <p class="button">Search for a City:</p>
+                        <input type="text" id="searchInput" class="button" placeholder="Find a city...">
+                        <button type="submit" id="submit" class="button">Search</button>
+                    </div>
+                    <div class="recentCities row">
+                        <div class="searchResults col-md-4">
+                            <div class="button">
+                                
+                            </div>
                         </div>
-                    </form>
+                        
+                    </div>
+                </div>
+            </aside>
+            <section class="weather col-md-8">
+                <div class="currentWeather row">
+                    <div class="currentWeatherHead col-md-8">
+                        <div class="row">
+                            <h2 class="currentCityName">Portland</h2>
+                            <h2 class="currentDate">3/20</h2>
+                            <img class="weatherIcon" href="">
+                        </div>
+                    </div>
+                    <div class="weatherInfo col-md-8">
+                        <p>Temp:</p>
+                        <p>Wind:</p>
+                        <p>UV Index:</p>
+                        <p>Humidity:<p>
+                    </div>
+                </div>
+                <div class="forecast flex-container row">
+                    <h2 class="col-md-8">Five-Day Forecast:</h2> 
+                    <div class="card-container row">
+                        <div class="card futureDay" id="1">
+                            <div class="date card-title"></div>
+                            <img class="icon">
+                            <p>Temp:</p>
+                            <p>Wind:</p>
+                            <p>Humidity:</p>
+                        </div>
+                        <div class="card futureDay" id="2">
+                            <div class="date card-title"></div>
+                            <img class="icon">
+                            <p>Temp:</p>
+                            <p>Wind:</p>
+                            <p>Humidity:</p>
+                        </div>
+                        <div class="card futureDay" id="3">
+                            <div class="date card-title"></div>
+                            <img class="icon">
+                            <p>Temp:</p>
+                            <p>Wind:</p>
+                            <p>Humidity:</p>
+                        </div>
+                        <div class="card futureDay" id="4">
+                            <div class="date card-title"></div>
+                            <img class="icon">
+                            <p>Temp:</p>
+                            <p>Wind:</p>
+                            <p>Humidity:</p>
+                        </div>
+                        <div class="card futureDay" id="5">
+                            <div class="date card-title"></div>
+                            <img class="icon">
+                            <p>Temp:</p>
+                            <p>Wind:</p>
+                            <p>Humidity:</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
-        </aside>
-        <section class="weather col-md-8">
-            <div class="currentWeather">
-                <h2 class="currentCityName">Portland</h2>
-                <h2 class="currentDate">3/20</h2>
-                <img class="weatherIcon" href="">
-                <p>Temp:</p>
-                <p>Wind:</p>
-                <p>UV Index:</p>
-                <p>Humidity:</p>
+    </div>
 
-        </section>
-        <section class="forecast card-container wrapper col-md-9">
-            <h2>Five-Day Forecast:</h2>
-            <div class="card futureDay" id="1">
-                <div class="date"></div>
-                <img class="icon">
-                <p>Temp:</p>
-                <p>Wind:</p>
-                <p>Humidity:</p>
-            </div>
-            <div class="card futureDay" id="2">
-                <div class="date"></div>
-                <img class="icon">
-                <p>Temp:</p>
-                <p>Wind:</p>
-                <p>Humidity:</p>
-            </div>
-            <div class="card futureDay" id="3">
-                <div class="date"></div>
-                <img class="icon">
-                <p>Temp:</p>
-                <p>Wind:</p>
-                <p>Humidity:</p>
-            </div>
-            <div class="card futureDay" id="4">
-                <div class="date"></div>
-                <img class="icon">
-                <p>Temp:</p>
-                <p>Wind:</p>
-                <p>Humidity:</p>
-            </div>
-            <div class="card futureDay" id="5">
-                <div class="date"></div>
-                <img class="icon">
-                <p>Temp:</p>
-                <p>Wind:</p>
-                <p>Humidity:</p>
-            </div>
-        </section>
-        </main>
-        </div>
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="assets/js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>

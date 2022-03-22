@@ -1,50 +1,30 @@
-* {
-    box-sizing: border-box;
-}
 header {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 47%, rgba(0,212,255,1) 100%);
+    color: white;
     text-align: center;
-    background-color: blue;
-    margin: 5px;
+    padding: 2px;
 }
 
 header h1 {
     font-size: 20px;
-    color: white;
+}
+
+.weather {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.button {
+    font-size: 20px;
+    display: inline;
+    width: 250px;
 }
 
 .flex-container {
-    display: flex;
-}
-
-.aside {
-    padding: 15px;
-    margin-left: 15px;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 20%
-}
-
-.forecastDisplay {
-    margin: 0 auto;
-    text-align: center;
-    padding: 5px;
-    float: right;
-    width: 75%;
-}
-
-.currentWeather {
-    border: 2px solid black;
-}
-
-.wrapper {
-    display: flex;
     justify-content: space-between;
-    width: 75%;
 }
 
-.futureDay {
-    padding: 10px;
-    margin: 5px;
-    background-color: slategray;
-}
+
+
+
