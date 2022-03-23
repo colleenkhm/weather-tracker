@@ -1,3 +1,9 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+} 
+
 header {
     background: rgb(2,0,36);
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 47%, rgba(0,212,255,1) 100%);
@@ -15,14 +21,24 @@ header h1 {
     margin: 0 auto;
 }
 
+.currentWeather {
+    border: solid black 2px;
+}
+
 .button {
     font-size: 20px;
     display: inline;
     width: 250px;
 }
 
-.flex-container {
+.card-container {
+    display: flex;
     justify-content: space-between;
+}
+
+.card {
+    background: rgb(40,40,40);
+    color: white;
 }
 
 
