@@ -40,12 +40,108 @@ function renderWeather(forecast) {
     var dateDisplayed = dateObject.toLocaleString("en-US", {timeZoneName: "short"})
     dateDisplayed = dateDisplayed.split(",")
     console.log(dateDisplayed)
-    var template = `
-    <h2>${city} ${dateDisplayed[0]}</h2>
-
+    var currentWeatherTemplate = `
+    <h2 class="col-md-12">${city} ${dateDisplayed[0]} <img class="icon"></h2>
+    <div class="col-md-12"
+        <p>Temp: ${temp}</p>
+        <p>Wind: ${wind} mph</p>
+        <p>UV Index: ${uvi}</p>
+        <p>Humidity: ${humidity}%</p>
     `
+    var temp1 = forecast.daily[1].temp.day
+    var wind1 = forecast.daily[1].wind_speed
+    var hum1 = forecast.daily[1].humidity
+    var unixDate1 = forecast.daily[1].dt
+    var dateObject1 = new Date(unixDate1 * 1000)
+    var dateDisplayed1 = dateObject1.toLocaleString("en-US", {timeZoneName: "short"})
+    dateDisplayed1 = dateDisplayed1.split(",")
+    var icon1 = forecast.daily[1].weather.icon
+
+    var temp2 = forecast.daily[2].temp.day
+    var wind2 = forecast.daily[2].wind_speed
+    var hum2 = forecast.daily[2].humidity
+    var unixDate2 = forecast.daily[2].dt
+    var dateObject2 = new Date(unixDate2 * 1000)
+    var dateDisplayed2 = dateObject2.toLocaleString("en-US", {timeZoneName: "short"})
+    dateDisplayed2 = dateDisplayed2.split(",")
+    var icon2 = forecast.daily[2].weather.icon
+
+    var temp3 = forecast.daily[3].temp.day
+    var wind3 = forecast.daily[3].wind_speed
+    var hum3 = forecast.daily[3].humidity
+    var unixDate3 = forecast.daily[3].dt
+    var dateObject3 = new Date(unixDate3 * 1000)
+    var dateDisplayed3 = dateObject3.toLocaleString("en-US", {timeZoneName: "short"})
+    dateDisplayed3 = dateDisplayed3.split(",")
+    var icon3 = forecast.daily[3].weather.icon
+
+    var temp4 = forecast.daily[4].temp.day
+    var wind4 = forecast.daily[4].wind_speed
+    var hum4 = forecast.daily[4].humidity
+    var unixDate4 = forecast.daily[4].dt
+    var dateObject4 = new Date(unixDate4 * 1000)
+    var dateDisplayed4 = dateObject4.toLocaleString("en-US", {timeZoneName: "short"})
+    dateDisplayed4 = dateDisplayed4.split(",")
+    var icon4 = forecast.daily[4].weather.icon
+
+    var temp5 = forecast.daily[5].temp.day
+    var wind5 = forecast.daily[5].wind_speed
+    var hum5 = forecast.daily[5].humidity
+    var unixDate5 = forecast.daily[5].dt
+    var dateObject5 = new Date(unixDate5 * 1000)
+    var dateDisplayed5 = dateObject5.toLocaleString("en-US", {timeZoneName: "short"})
+    dateDisplayed5 = dateDisplayed5.split(",")
+    var icon5 = forecast.daily[5].weather.icon
+
+    var futureWeatherTemplate = `
+    <h2 class="col-md-12">Five-Day Forecast:</h2>
+    <div class="card-container col-md-12">
+        <div class="forecast card" id="1">
+            <div class="date card-title">${dateDisplayed1[0]}</div>
+                <img class="icon">
+                <p>Temp: ${temp1}</p>
+                <p>Wind: ${wind1} mph</p>
+                <p>Humidity: ${hum1}%</p>
+            </div>
+        </div>
+        <div class="forecast card" id="2">
+            <div class="date card-title">${dateDisplayed2[0]}</div>
+                <img class="icon">
+                <p>Temp: ${temp2}</p>
+                <p>Wind: ${wind2} mph</p>
+                <p>Humidity: ${hum2}%</p>
+            </div>
+        </div>
+        <div class="forecast card" id="3">
+            <div class="date card-title">${dateDisplayed3[0]}</div>
+                <img class="icon">
+                <p>Temp: ${temp3}</p>
+                <p>Wind: ${wind3} mph</p>
+                <p>Humidity: ${hum3}%</p>
+            </div>
+        </div>
+        <div class="forecast card" id="4">
+            <div class="date card-title">${dateDisplayed4[0]}</div>
+                <img class="icon">
+                <p>Temp: ${temp4}</p>
+                <p>Wind: ${wind4} mph</p>
+                <p>Humidity: ${hum4}%</p>
+            </div>
+        </div>
+        <div class="forecast card" id="5">
+            <div class="date card-title">${dateDisplayed5[0]}</div>
+                <img class="icon">
+                <p>Temp: ${temp5}</p>
+                <p>Wind: ${wind5} mph</p>
+                <p>Humidity: ${hum5}%</p>
+            </div>
+        </div>
+    <div>`
     var currentWeather = document.querySelector("#currentWeather")
-    currentWeather.innerHTML = template
+    currentWeather.innerHTML = currentWeatherTemplate
+
+    var futureWeather = document.querySelector("#futureWeather")
+    futureWeather.innerHTML = futureWeatherTemplate
 }
 
 // // var currentWeather = 
