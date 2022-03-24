@@ -14,6 +14,15 @@ function getCity(event) {
         .then(data => getWeather(data))
 }
 
+// write a function to add searched city to local storage
+var submitAndSave = document.getElementById("submit");
+submitAndSave.addEventListener("click", saveCity);
+
+var cityArr = new Array();
+
+function saveCity() {
+    
+}
 // write a function to get weather for city
 function getWeather(cityArr) {
     console.log(cityArr)
