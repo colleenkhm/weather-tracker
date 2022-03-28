@@ -2,7 +2,9 @@ const api = '920955b96df093ea34bbb2cb68023416';
 var searchInput = document.getElementById("searchInput");
 var searchInputSubmit = document.getElementById("submit");
 var city
-var cityDisplayed
+// create empty variable to add cities to
+var cities = []
+var recentSearchCounter = 0;
 // function to search for a city
 function getCity(event) {
     event.preventDefault();
@@ -15,13 +17,17 @@ function getCity(event) {
 }
 
 // write a function to add searched city to local storage
-var submitAndSave = document.getElementById("submit");
-submitAndSave.addEventListener("click", saveCity);
 
-var cityArr = new Array();
+var createRecentCity = function() {
+    var listItemEl = document.createElement("li");
+    listItemEl.className = "recentSearch"
 
-function saveCity() {
-    
+    //add city id as custom attribute
+    listItemEl.setAttribute("data-city-id", recentCityCounter);
+
+    var cityInfoEl = document.createElement("h3");
+    cityInfoEl.className = "cityInfo";
+    cityInfoEl.innerHTML = "<h3 class='cityName'>"
 }
 // write a function to get weather for city
 function getWeather(cityArr) {
@@ -34,6 +40,10 @@ function getWeather(cityArr) {
         .then(data => renderWeather(data))
 }
 searchInputSubmit.addEventListener("click", getCity);
+
+// write a function to store recently-searched cities
+
+//write a function to fetch and display recently-searched cities
 
 // write a function to render weather
 function renderWeather(forecast) {
