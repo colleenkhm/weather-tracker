@@ -10,11 +10,23 @@ function getCity(event) {
     event.preventDefault();
     console.log(searchInput.value)
     city = searchInput.value.trim();
+    cities.push(city);
+    localStorage.setItem("search-history", JSON.stringify(cities))
     var queryURL = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${api}`;
     fetch(queryURL)
         .then(response => response.json())
         .then(data => getWeather(data))
 }
+
+// write a function that checks local storage for search history and populates cities array with results
+function getHistory() {
+    var history = localStorage.getItem("search-history")
+    history = JSON.parse(history)
+    console.log(history)
+    history.forEach(place => cities.push(place))
+    console.log(cities)
+}
+getHistory()
 
 // write a function to add searched city to local storage
 
